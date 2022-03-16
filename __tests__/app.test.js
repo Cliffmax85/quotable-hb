@@ -15,8 +15,8 @@ describe('quotable routes', () => {
   it('should create a new profile with a random quote', async () => {
     const res = await request(app)
       .post('/api/v1/profiles')
-      .send({ name: 'Test User', quote: 'n/a' });
-
+      .send({ name: 'Test User' });
+    console.log(res);
     expect(res.body).toEqual({
       id: expect.any(String),
       name: 'Test User',
